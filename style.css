@@ -1,0 +1,859 @@
+/* ================================
+   RANTHAMBORE SAFARIS
+   MAIN STYLESHEET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #20251f;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1150px, 92%);
+    margin: auto;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #172217;
+    color: white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+    min-height: 74px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #d7a94b;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #d7a94b;
+}
+
+.nav-button {
+    background: #d7a94b;
+    color: #172217;
+    padding: 11px 19px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.nav-button:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 680px;
+    position: relative;
+    background:
+        linear-gradient(
+            rgba(10, 25, 12, 0.68),
+            rgba(10, 25, 12, 0.60)
+        ),
+        url("images/tiger.jpg") center / cover no-repeat;
+}
+
+.hero-overlay {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+    max-width: 750px;
+    padding: 70px 0;
+}
+
+.small-title {
+    color: #d7a94b;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.05;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.hero h1 span {
+    color: #d7a94b;
+}
+
+.hero-text {
+    max-width: 650px;
+    font-size: 18px;
+    color: #eeeeee;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 7px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn.primary {
+    background: #d7a94b;
+    color: #172217;
+}
+
+.btn.primary:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    color: white;
+}
+
+.btn.secondary:hover {
+    background: white;
+    color: #172217;
+}
+
+
+/* ================================
+   GENERAL SECTIONS
+================================ */
+
+.section {
+    padding: 90px 0;
+}
+
+.section.light {
+    background: #f5f5ef;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading p {
+    color: #a67b22;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    margin-bottom: 8px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.15;
+    color: #1b281b;
+    margin-bottom: 12px;
+}
+
+.section-heading span {
+    color: #666666;
+    font-size: 16px;
+}
+
+
+/* ================================
+   SAFARI CARDS
+================================ */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e6e6df;
+    border-radius: 14px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.card-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f2ead5;
+    border-radius: 50%;
+    font-size: 30px;
+    margin-bottom: 22px;
+}
+
+.card h3 {
+    font-size: 23px;
+    margin-bottom: 12px;
+    color: #1c2a1c;
+}
+
+.card p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.card a {
+    color: #a67b22;
+    font-weight: 700;
+}
+
+.card a:hover {
+    color: #172217;
+}
+
+
+/* ================================
+   HOTEL CARDS
+================================ */
+
+.hotel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.hotel-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s ease;
+}
+/* ================================
+   HOTEL INFORMATION
+================================ */
+
+.hotel-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0 18px;
+}
+
+.hotel-info span {
+    background: #f3f5ef;
+    color: #405044;
+    padding: 7px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e1e5dc;
+}
+
+.hotel-card:hover {
+    transform: translateY(-6px);
+}
+
+.hotel-image {
+    height: 210px;
+    background:
+        linear-gradient(
+            135deg,
+            #253b25,
+            #758f64
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 70px;
+}
+
+.hotel-content {
+    padding: 25px;
+}
+
+.hotel-content h3 {
+    color: #1c2a1c;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.hotel-content p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.hotel-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eeeeee;
+    padding-top: 17px;
+}
+
+.hotel-bottom strong {
+    color: #1c2a1c;
+    font-size: 18px;
+}
+
+.hotel-bottom a {
+    background: #172217;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* ================================
+   PACKAGES
+================================ */
+
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.package {
+    position: relative;
+    background: white;
+    border: 1px solid #e4e4dc;
+    border-radius: 14px;
+    padding: 35px 30px;
+    text-align: center;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.05);
+}
+
+.package.featured {
+    border: 2px solid #d7a94b;
+    transform: translateY(-8px);
+}
+
+.popular {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d7a94b;
+    color: #172217;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.package h3 {
+    font-size: 24px;
+    color: #1c2a1c;
+    margin-bottom: 12px;
+}
+
+.package p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.package strong {
+    display: block;
+    font-size: 24px;
+    color: #a67b22;
+    margin-bottom: 22px;
+}
+
+.package a {
+    display: inline-block;
+    background: #172217;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about {
+    padding: 85px 0;
+    background: #172217;
+    color: white;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.1;
+}
+
+.about .small-title {
+    margin-bottom: 15px;
+}
+
+.about-content > p {
+    color: #d4d4d4;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   BOOKING FORM
+================================ */
+
+.booking-section {
+    background: #f8f8f3;
+}
+/* ================================
+   SAFARI BOOKING HIGHLIGHT
+================================ */
+
+.booking-section {
+    background: linear-gradient(
+        180deg,
+        #f8f8f3 0%,
+        #eef2e9 100%
+    );
+}
+
+.booking-section .section-heading {
+    margin-bottom: 35px;
+}
+
+.booking-section .section-heading p {
+    color: #a67b22;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.booking-section .section-heading h2 {
+    color: #173b2a;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 12px;
+}
+
+.booking-section .section-heading span {
+    color: #666;
+    font-size: 16px;
+}
+
+.booking-form {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #263226;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d8d8d1;
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #a67b22;
+    box-shadow: 0 0 0 3px rgba(166, 123, 34, 0.10);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    grid-column: 1 / -1;
+    border: none;
+    background: #172217;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #a67b22;
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact {
+    padding: 85px 0;
+    background: #202c20;
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-grid > div:first-child > p:last-child {
+    color: #d3d3d3;
+    font-size: 17px;
+    max-width: 520px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.contact-details div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.contact-details strong {
+    color: #d7a94b;
+}
+
+.contact-details a,
+.contact-details span {
+    color: white;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #101810;
+    color: #aaaaaa;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content strong {
+    font-size: 20px;
+    color: white;
+}
+
+.footer-content strong span {
+    color: #d7a94b;
+}
+
+.footer-content p {
+    font-size: 13px;
+}
+
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .cards,
+    .hotel-grid,
+    .package-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .about-content,
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .package.featured {
+        transform: none;
+    }
+}
+
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 65px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    nav a {
+        white-space: nowrap;
+        font-size: 12px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero,
+    .hero-overlay {
+        min-height: 600px;
+    }
+
+    .hero-content {
+        padding: 50px 0;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .cards,
+    .hotel-grid,
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-form {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .submit-btn {
+        grid-column: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* ========================================
+   GALLERY SECTION
+======================================== */
+
+.gallery {
+    padding: 80px 0;
+    background: #f5f7f2;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: #c89b3c;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    color: #173b2a;
+    margin-bottom: 12px;
+}
+
+.section-title span {
+    color: #666;
+    font-size: 16px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #ddd;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+
+    .gallery {
+        padding: 60px 0;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 240px;
+    }
+}
